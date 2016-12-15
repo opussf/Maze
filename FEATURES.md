@@ -49,10 +49,24 @@ Rotation should let the explorer 'pitch', 'roll', and 'yaw'.
 Translation should let the explorer move in any of the X, Y, or Z axis.
 Only a matter of scale (how big are the open spaces), should inhibit the ability to move in a direction, or have a specific movement vector.
 
+The normal 'AWSD' system, paired with the arrow keys and a jump button, may be good enough, with only a few additions.
+'W' and 'S' would be a translation forward (in the facing direction), or backwards.
+'Q' and 'E' tend to be 'strafing', or moving side to side.
+'space' and 'z' would be a translation of up and down.
 
+'A' and 'D' would be a rotation of yaw, left or right.
+'up' and 'down' would be rotation of pitch.
+'left' and 'right' would be a roll.
 
+Depending on the movement scheme, stopping would be automatic.
+The 'walking' scheme would let the explorer move as they press the buttons.
+A jump might detatch the explorer from the 'floor', to let them reorient and 'land' on the 'ceiling'.
+
+The 'momentum' scheme might not let the explorer 'translate' except by pushing off of a nearby wall.
+The explorer could move left if there is a wall on their right, or move backwards if a wall is in front of them, etc.
 
 ## Some Technical babble
+
 Since most mazes are 2D, the floor is a given, the ceiling un-important, and only the 4 walls need to be known.
 If one were to create a maze using a coordinate system in 2D, then each coordinate could represent a 'room'.
 A 'room' has the ability to have either exits, or walls.
@@ -76,6 +90,7 @@ A wall with a bit of art might be shown as a 'room' with an 'A'.
 A 'room' with a light in it, but passable, might be shown with an 'L'.
 
 ### Expanding to 3D
+
 In 3D, much of the above can be used, with the addition of the Z (or Y) axis.
 Adding in 2 more bits to the encoding for the 'ceiling' and 'floor' (CNEFSW).
 Note the off by 3 places pairing, this may or may not help the math later (hell if I know at this stage).
@@ -89,6 +104,13 @@ If a room can only have one extra property then this can encode 4 distinct state
 This could also encode if it is the start, or end, or a check point (score gain?) for finding an item?
 More data may be needed.
 
+### Into a polar system.
+
+While I started this idea as a what-if about a 3D cube type of system, this could also create a polar type of system, with a y-offset.
+This could simulate a tube, such as a space ship, or current space station, like the ISS, or even something more complex and exotic.
+Navigating something like a spinning wheel type of space station, or even a spinning tube could then be simulated.
+The effects of rotation, and angular momemtum would then enter into the movement challenges.
+
 ## Starting and Solving
 Mazes tend to have a start and an end, an entrance and an exit, or an entry point and a goal.
 There could be a maze where one enters at one point, needs to find an item, and then either return to the start point, or make it to a goal.
@@ -97,3 +119,27 @@ Some could have puzzles.
 Switches that open doors, swap rooms, etc.
 
 ### 3D specific puzzles
+Puzzles will expand this to include challenges of navigation.
+Having a pull in a specific direction because of artificial gravity, or because of rotation, will change how the explorer has to perceve(sp?) the maze.
+
+
+## Keeping it simple to start.
+
+The initial plan is to keep it super simple.
+Make this an exploration into Unity, or another technology to render and move through a maze.
+
+* Design and realize a 3D maze
+	- Create a simple 10x10x10 'room' maze, with a starting point, and an ending point.
+	- Encode the maze
+* Write a system in Unity to render this maze
+	- Simple walls and perspective
+* Expand to allow the explorer to move through the maze
+	- Collision detection
+	- Simple free movement
+	- Change of orientation based on perspective
+* Start and goal
+	- Start is a 'room'
+	- Goal is out side of the 'cube'
+
+* Design and realize a 3D maze creation system.
+
