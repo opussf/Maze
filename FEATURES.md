@@ -129,6 +129,7 @@ The initial plan is to keep it super simple.
 Make this an exploration into Unity, or another technology to render and move through a maze.
 
 * Design and realize a 3D maze
+	- Maybe start with a 2x2x2, or even a 3x3x3 sized maze.
 	- Create a simple 10x10x10 'room' maze, with a starting point, and an ending point.
 	- Encode the maze
 * Write a system in Unity to render this maze
@@ -142,4 +143,6 @@ Make this an exploration into Unity, or another technology to render and move th
 	- Goal is out side of the 'cube'
 
 * Design and realize a 3D maze creation system.
+
+## Memory requirements
 
