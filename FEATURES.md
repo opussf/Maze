@@ -153,3 +153,11 @@ N  E  S  W  U  D
 1  2  4  8 16 32
 
 
+
+A full maze will be encoded as a series of numbers (integers).
+The first number will be the number of columns (West to East).
+The 2nd number will be the number of rows (North to South).
+The 3rd number will be the number of levels (Top to Bottom).
+
+Cordinal directions are defined as those from a map, with Up being 'above' an observer as they are standing on the Down, facing North, with West to their left, and East to their right.
+

@@ -1,0 +1,15 @@
+Minecraft systems
+
+
+Item elevator:
+
+https://www.youtube.com/watch?v=u6gicMn5ips
+
+Note:  	Top should have water source offset by 1 block, flowing towards and ending over a hopper.
+The hopper should be offset by 2, and one block lower than the water.
+The Hopper will feed the system, or a chest.
+
+
+Sorter:
+
+https://minecraft.gamepedia.com/Tutorials/Hopper
