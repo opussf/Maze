@@ -146,3 +146,10 @@ Make this an exploration into Unity, or another technology to render and move th
 
 ## Memory requirements
 
+## Encoding
+
+Encode the blocks as binary.
+N  E  S  W  U  D
+1  2  4  8 16 32
+
+
